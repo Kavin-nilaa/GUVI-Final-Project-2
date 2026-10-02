@@ -1,5 +1,4 @@
 import time
-
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -62,7 +61,6 @@ def test_tc004_verify_main_menu_visibility_clickability(driver):
 
 def test_tc008_verify_myinfo_visibility_clickability(driver):
     login = LoginPage(driver)
-    #home = HomePage(driver)
     myinfo = MyInfoPage(driver)
 
     login.open_login_page()
@@ -116,11 +114,9 @@ def test_tc010_verify_claim_submission(driver):
     claim.click_claim()
     claim.select_event()
     claim.select_currency()
-    time.sleep(3)
     claim.enter_remarks("Submitting new claim")
-    time.sleep(3)
     claim.click_create()
-    time.sleep(3)
+
 
 
 
